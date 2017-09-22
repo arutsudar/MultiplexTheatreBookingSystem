@@ -1,0 +1,55 @@
+create table movie
+(
+  id number,
+  showtime varchar2(10),
+  screen_no number,
+  movie_name varchar2(50),
+  tot_tickets number,
+  description varchar2(400),
+  primary key(id)
+);
+drop table movie;
+insert into movie values(1,'09.30',1,'Kaththi',200,'The story focusing on the burning issues of farmers committing suicide due to corporate encroachment.');
+insert into movie values(2,'14.30',2,'Interstellar',150,' ');
+insert into movie values(3,'18.30',1,'Vinnaithandi Varuvaya',100,' ');
+insert into movie values(4,'22.30',4,'Nanban',1,' ');
+insert into movie values(5,'10.10',3,'Jurassic World',90,'It is an adventurous movie directed by spielburg.');
+insert into movie values(6,'10.30',4,'Puli',110,'It is a fantasy film with vijay in leading role.');
+insert into movie values(7,'22.30',2,'Premam',80,'A romantic film with Nivin Pauly in leading role.');
+
+
+
+create table login
+(
+  username varchar2(15),
+  password varchar2(15),
+  primary key(username)
+);
+
+create table users
+(
+  name varchar2(25),
+  username varchar2(15),
+  password varchar2(15),
+  email varchar2(25),
+  mobile_no numeric,
+  primary key(username)
+);
+create table message
+(
+  email varchar2(25),
+  mobile_no numeric
+);
+
+create table book_ticket_confirmation
+(
+  no_of_tickets numeric
+);
+
+create table payment
+(
+  cash numeric(10,2)
+);
+
+
+//System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getInt(3)+"  "+rs.getString(4)+"  "+rs.getInt(5)+"  "+rs.getString(6));
